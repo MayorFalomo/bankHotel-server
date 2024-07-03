@@ -13,7 +13,6 @@ export const newUserInfo = async (req, res) => {
 
     const UserData = new User(user);
     const savedUser = await UserData.save();
-    console.log(savedUser, "saveduser");
     res.status(201).json(savedUser);
   } catch (error) {
     console.log(error);
